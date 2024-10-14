@@ -1,0 +1,416 @@
+html {
+  font-size: 16px; /* Taille de base pour 1rem */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.6;
+    color: #333
+}
+
+/* Style de l'en-tête principal */
+header {
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 40px 0; /* Top & bottom */
+}
+
+/* conteneur pour le contenu de l'en-tête */
+.header-content {
+  display: flex;
+  flex-direction: column; /* Empile les éléments verticalement */
+  align-items: center; /* Centre les éléments horizontalement */
+  max-width: 1200px;
+  margin: 0 auto; /* centre le conteneur horizontalement */
+  /* padding: 0 20px; */
+}
+
+/* styles pour la liste de navigation */
+nav ul {
+  display: flex; /* aligne les elements de navigation horizontalement */
+  justify-content: center; /* Centre les liens horizontalement */
+  list-style-type: none; /* supprime les puces de la liste */
+  padding: 0; /* supprime le padding par défaut */
+  margin: O; /* supprime la marge par défaut */
+}
+
+/* Style de pour chaque élément de la liste Navigation */
+nav li {
+  margin-left: 20px; /* Espace entre les liens de Navigation */
+}
+
+/* Style des liens de navigation */
+nav a {
+  text-decoration: none; /* supprime le soulignement des liens */
+  color: #333; /* couleur du texte des liens */
+  font-weight: bold; /* Épaisseur de la police */
+  transition: color 0.3s ease; /* Animation douce pour le changement de couleur */
+}
+
+/* Style au survol des liens de navigation */
+nav a:hover {
+  color: #007bff;
+}
+
+.logo {
+  font-size: 2.5rem;
+  margin: 0; /* supprime la marge par défaut */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 { 
+  font-size: 2.5rem; /* 2.5rem * 16px = 40px */
+}
+
+h2 {
+  font-size: 2rem; /* 2rem * 16px = 32px */
+}
+
+h3 {
+  font-size: 1.2rem
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    flex-direction: column;
+    padding: 0 20px;
+    box-sizing: border-box;  
+}
+
+header, main, footer {
+  width: 100%;
+}
+
+/* Style pour la section mission */
+#mission {
+  position: relative; 
+  padding-top: 5px;
+} 
+
+/* Barre colorée au dessus du contenu de la section mission */
+#mission::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #ffff;
+  z-index: 3; 
+}
+
+.mission-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0 80px 0;
+    background-image: url("/ressources/images/Enterprises.JPG");
+    background-size: cover;
+    background-position: center;
+    color: white; /* Assurez-vous que le texte est lisible sur l'image */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    gap: 2px;
+  }
+
+  .mission-text {
+    background-color: white;
+    padding: 1.2rem 2rem;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+/*     max-width: 800px;
+ */  }
+
+  /* Superposition sombre pour améliorer la lisibilité */
+.mission-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.mission-content h2,
+.mission-content p {
+/*   position: relative;
+ */  margin: 0;
+ color: black;
+}
+
+.mission-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.625rem;
+}
+
+.mission-content p {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5;
+}
+
+#portfolio, #team, #contact, footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Style pour la section team */
+#team {
+  padding: 2rem 1rem; /* Espace autour de la section #team */
+}
+
+.team-content {
+  max-width: 1200px; /* limite la largeur max du contenu */
+  margin: 0 auto; /* Centre le contenu horizontalement */
+}
+
+#team h2 {
+  text-align: center; /* Centre le titre */
+  font-size: 2rem;
+  margin-bottom: 2rem; /* De l'espace sous le titre */
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap; /* Passer à la ligne si necéssaire */
+  justify-content: center; /* Centre les elements Horizontalement */
+  gap: 2rem; /* De l'espace entre les elements */
+}
+
+.team-member {
+  flex: 1 1 250px; /* Permet aux éléments de grandir et rétrécir, avec une base de 250px */
+  max-width: 260px; /* Limite la largeur maximale de chaque carte */
+  display: flex; /* Utilise Flexbox pour le contenu de la carte */
+  flex-direction: column; /* Empile les éléments verticalement */
+  align-items: center; /* Centre les éléments horizontalement dans la carte */
+  text-align: center; /* Centre le texte */
+  background-color: #f8f8f8; /* Couleur de fond de la carte */
+  padding: 1.5rem; /* Ajoute de l'espace à l'intérieur de la carte */
+  border-radius: 8px; /* Arrondit les coins de la carte */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ajoute une ombre légère */
+}
+
+team-member img {
+  width: 200px; /* Définit la largeur de l'image */
+  height: 200px; /* Définit la hauteur de l'image */
+  object-fit: cover; /* Assure que l'image couvre bien le carré */
+  border-radius: 50%; /* Rend l'image circulaire */
+  margin-bottom: 1rem; /* Ajoute de l'espace sous l'image */
+}
+
+.team-member h3 {
+  font-size: 1.25rem; /* Définit la taille du nom */
+  margin-bottom: 0.5rem; /* Ajoute de l'espace sous le nom */
+}
+
+.team-member p {
+  font-size: 1rem; /* Définit la taille du texte du poste */
+  color: #666; /* Couleur du texte du poste */
+}
+
+/* Style pour la section de portfolio */
+#portfolio {
+ padding: 2rem 1rem; 
+}
+
+.portfolio-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Style pour le titre principal et le paragraphe d'introduction */
+.portfolio-content > h2, 
+.portfolio-content > p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Container pour les articles du portfolio */
+.portfolio-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Style pour chaque article du portfolio */
+.portfolio-articles {
+  display: flex;
+  flex: 0 1 calc(50% - 1rem); /* 2 articles pour les grands écrans */
+  max-width: 500px;
+  align-items: center;
+}
+
+/* Style pour l'image dans chaque article */
+.portfolio-articles img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+ .portfolio-articles h3 {
+  font-size: 1rem;
+  color:#666;
+  margin-left: 1rem; /* Espace entre l'image et le titre */
+  flex: 1; /* le titre prend l'espace restant */
+}
+
+/* Style pour la section contact */
+#contact {
+text-align: center;
+padding: 2rem 1rem; /* Ajoute de l'espace autour du contenu */
+}
+
+#contact h2 {
+  margin-bottom: 1rem; /* Espace sous le titre */
+}
+
+#contact address {
+  font-style: normal; /* supprime l'italique */
+  margin-bottom: 2rem; /* Espace sous l'adresse */
+}
+#contact a {
+  text-decoration: none; /* enleve le soulignement des liens */
+  color: #007bff;
+  transform: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #0056b3; /* couleur au survol*/
+}
+
+/* Espacer les liens verticalement */
+#contact a:first-of-type {
+  display: block; /* l'email sur sa propre ligne */
+  margin-bottom: 0.5rem; /* Espace entre l'email et le Téléphone */
+}
+
+/* Media queries pour la responsivité */
+
+@media (min-width: 768px) and (max-width: 1023) {
+  .team-members {
+    justify-content: center; /* Répartit l'espace entre les éléments sur les écrans plus larges */
+  }
+  
+  .team-member {
+    flex-basis: calc(33.333% - 1rem); /* 3 éléments par ligne sur les écrans moyens */
+    max-width: calc(50% - 1rem);
+  }
+}
+
+/* Media query pour les écrans de taille moyenne et petite */
+@media (max-width: 768px) {
+  .portfolio-articles {
+    flex: 0 1 100%; /* Un article par ligne sur les petits écrans */
+    max-width: none;
+  }
+
+  .portfolio-articles img {
+    width: 40%;
+  }
+
+  .portfolio-articles h3 {
+    font-size: 0.9rem; /* reduit légèrement la taille du titre */
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px; /* Augmente légèrement la taille de base pour les grands écrans */
+  }
+
+  .header-content {
+    flex-direction: column; /* Empile le logo, le navigation  vertical*/
+  }
+
+  nav ul {
+    margin-top: 0px; /* supprime la marge au-dessus de la navigation */
+  }
+
+  nav li {
+    margin: 0 4rem; /* Ajuste l'espacement horizontal entre les liens */
+  }
+
+  .mission-text {
+    padding: 1rem 1.5rem;
+  }
+
+  .mission-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .mission-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* media query pour les grands écrans */
+@media (min-width: 1024px) {
+  .team-members {
+    justify-content: center;
+  }
+
+  .team-member {
+    flex-basis: calc(33.333% - 1.5rem);
+    /* max-width: calc(33.333% - 1.5rem); */
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-text {
+    padding: 0.75rem 1rem;
+  }
+
+  .mission-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .mission-content p {
+    font-size: 0.85rem;
+  }
+
+  .team-member {
+    flex-basis: 100%; /* Sur les petits écrans, prend toute la largeur */
+  }
+
+  #team h2 {
+    font-size: 1.75rem; /* Réduit légèrement la taille du titre */
+  }
+
+  .team-member h3 {
+    font-size: 1.1rem; /* Réduit légèrement la taille du nom */
+  }
+
+  .team-member p {
+    font-size: 0.9rem; /* Réduit légèrement la taille du texte du poste */
+  }
+}
+
+@media (min-width: 1200px) {
+  .mission-content h2 {
+    font-size: 2.25rem;
+  }
+
+  .mission-content p {
+    font-size: 1.1rem;
+  }
+}
